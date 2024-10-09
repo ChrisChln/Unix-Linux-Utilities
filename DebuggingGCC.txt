@@ -1,0 +1,118 @@
+Window Powershell File copy
+
+gcc -g -o tucp.exe tucp.c file_utils.c
+echo "This is a test file." > source.txt
+.\tucp.exe source.txt destination.txt
+
+Delete 
+
+Remove-Item tucp.exe
+Remove-Item destination.txt
+Remove-Item source.txt
+
+
+
+
+
+
+In MacOs
+cd desktop/project-1-linux-utilities-ChrisChln-main
+
+Temple Linux Server
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+
+
+File copy
+
+ls
+gcc -Wall -Werror -o tucp tucp.c file_utils.c
+echo "This is a test file." > source.txt
+./tucp source.txt destination.txt
+ls
+
+
+file delete
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/destination.txt 
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/tucp
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/tuls
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/source.txt
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file1.txt
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file2.txt
+rm /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file3.txt
+rm -r /home/TU/tus11309/OperatingSystem/destinationfolder
+rm -r ~/Desktop/destinationfolder
+rm -r ~/Desktop/test_directory
+
+
+
+
+
+
+create folder at desktop and copy
+
+Mac:
+gcc -Wall -Werror -o tucp tucp.c file_utils.c
+echo "This is a test file." > source.txt
+mkdir -p ~/Desktop/destinationfolder
+./tucp source.txt ~/Desktop/destinationfolder/
+
+
+Linux：
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+gcc -Wall -Werror -o tucp tucp.c file_utils.c
+echo "This is a test file." > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/source.txt
+mkdir -p /home/TU/tus11309/OperatingSystem/destinationfolder
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+./tucp source.txt /home/TU/tus11309/OperatingSystem/destinationfolder/
+
+
+
+
+Create a folder then copy mulitiple file to the folder
+
+gcc -Wall -Werror -o tucp tucp.c file_utils.c
+echo "This is file 1" > file1.txt
+echo "This is file 2" > file2.txt
+echo "This is file 3" > file3.txt
+mkdir -p ~/Desktop/destinationfolder
+./tucp file1.txt file2.txt file3.txt ~/Desktop/destinationfolder/
+
+Linux：
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+gcc -Wall -Werror -o tucp tucp.c file_utils.c
+echo "This is file 1" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file1.txt
+echo "This is file 2" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file2.txt
+echo "This is file 3" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file3.txt
+mkdir -p /home/TU/tus11309/OperatingSystem/destinationfolder
+./tucp /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file1.txt \
+       /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file2.txt \
+       /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file3.txt \
+       /home/TU/tus11309/OperatingSystem/destinationfolder/
+
+
+
+Extra credit tuls
+
+gcc -o tuls tuls.c -Wall -Werror
+echo "This is file 1" > file1.txt
+echo "This is file 2" > file2.txt
+echo "This is file 3" > file3.txt
+./tuls
+
+If folder is not exist then print error message：
+./tuls /path/to/nonexistent/directory
+
+
+Linux：
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+./tuls
+gcc -o tuls tuls.c -Wall -Werror
+echo "This is file 1" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file1.txt
+echo "This is file 2" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file2.txt
+echo "This is file 3" > /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/file3.txt
+cd /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main
+./tuls
+
+./tuls /home/TU/tus11309/OperatingSystem/project-1-linux-utilities-ChrisChln-main/nonexistent_directory
+
+
